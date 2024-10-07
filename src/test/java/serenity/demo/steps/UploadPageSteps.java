@@ -2,6 +2,7 @@ package serenity.demo.steps;
 import net.serenitybdd.annotations.Step;
 import serenity.demo.pagesObject.UploadPage;
 
+
 public class UploadPageSteps {
 
     private UploadPage uploadPage;

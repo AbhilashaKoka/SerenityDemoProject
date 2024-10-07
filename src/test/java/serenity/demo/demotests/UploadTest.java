@@ -4,8 +4,9 @@ import net.serenitybdd.annotations.Title;
 import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.serenitybdd.junit.runners.SerenityRunner;
+import org.junit.Assert;
 import org.junit.Test;
-import org.junit.jupiter.api.Assertions;
+
 import org.junit.runner.RunWith;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -54,7 +55,7 @@ public class UploadTest extends PageObject{
         }
         find(By.xpath("//*[@id=\"uploadFile\"]")).sendKeys(System.getProperty("user.home")+"\\Downloads\\sampleFile.jpeg");
         String filePath= find(By.xpath("//*[@id=\"uploadedFilePath\"]")).getAttribute("innerText");
-        Assertions.assertEquals("C:\\fakepath\\sampleFile.jpeg", filePath);
+        Assert.assertEquals("C:\\fakepath\\sampleFile.jpeg", filePath);
     }
 }
 

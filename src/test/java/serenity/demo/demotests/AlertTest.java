@@ -24,16 +24,12 @@ public class AlertTest extends PageObject {
 		System.out.println(getTitle());
 		evaluateJavascript("window.scrollBy(0,300)");
 		setImplicitTimeout(10, ChronoUnit.SECONDS);
-
 		WebElementFacade Frames_Frames = $("//*[@class=\"category-cards\"]//following::div[@class=\"card-body\"]//h5[contains(text(),\"Alerts, Frame & Windows\")]");
 		Frames_Frames.click();
 		WebElementFacade Alerts_span = $("//*[@class=\"accordion\"]//div[@class=\"element-group\"]//following::span[@class=\"text\" and contains(text(),\"Alerts\")]");
 		Alerts_span.click();
-
-
 		WebElementFacade AlertWrapper = $("//*[@id=\"javascriptAlertsWrapper\"]");
 		System.out.println(AlertWrapper.getAttribute("innerText"));
-
 		WebElementFacade alertButton = $("//button[@id=\"alertButton\"]");
 		alertButton.click();
 		Alert alert=getAlert();

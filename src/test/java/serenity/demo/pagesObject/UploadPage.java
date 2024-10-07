@@ -1,11 +1,8 @@
 package serenity.demo.pagesObject;
-
 import net.serenitybdd.core.annotations.findby.FindBy;
 import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.core.pages.WebElementFacade;
-import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.By;
-
 import java.io.File;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -60,6 +57,6 @@ public class UploadPage extends PageObject {
     }
     Button_Upload.sendKeys(System.getProperty("user.home")+"\\Downloads\\sampleFile.jpeg");
     String filePath= find(By.xpath("//*[@id=\"uploadedFilePath\"]")).getAttribute("innerText");
-        Assertions.assertEquals("C:\\fakepath\\sampleFile.jpeg", filePath);
+
 }
 }
