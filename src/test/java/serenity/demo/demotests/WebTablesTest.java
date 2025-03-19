@@ -1,5 +1,4 @@
 package serenity.demo.demotests;
-
 import java.util.List;
 import net.serenitybdd.core.pages.WebElementFacade;
 import org.junit.Test;
@@ -22,7 +21,6 @@ public class WebTablesTest extends PageObject {
 	
 	@Test
 	public void webtable() {
-
 		open();
 		evaluateJavascript("window.scrollBy(0,300)");
 		WebElementFacade Element_Frames= $("//*[@class=\"category-cards\"]//following::div[@class=\"card-body\"]//h5[contains(text(),\"Elements\")]");
